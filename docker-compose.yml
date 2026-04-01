@@ -1,0 +1,8 @@
+services:
+  wateringhole:
+    image: ghcr.io/stockyard-dev/stockyard-wateringhole:latest
+    ports: ["9000:9000"]
+    volumes: [wateringhole-data:/data]
+    restart: unless-stopped
+volumes:
+  wateringhole-data:
